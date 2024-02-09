@@ -61,19 +61,6 @@
 		padding: 2rem; 
 	} 
 
-	.services { 
-		padding: 0; 
-	} 
-
-	.my-row { 
-		gap: 10px; 
-	} 
-
-	.my-row .my-col { 
-		text-align: center; 
-		width: 35%; 
-	} 
-
 	.scroll{
 		display: none;
 	}
@@ -143,19 +130,9 @@
 				}
 			}
 		}
-	
-	
-	.hero { 
-		justify-content: center; 
-		color: #fff; 
-		background-image: radial-gradient(circle, rgb(15 14 14 / 30%), rgb(102 96 96 / 40%), rgb(163 160 160 / 16%)), url('./Images/heroImg3.avif') 
-	} 
 
-	.sub-heading { 
-		color: #fff9f9cc; 
-	} 
 
-	.hero .intro-buttons { 
+	.intro .intro-buttons { 
 		gap: 20px; 
 	} 
 
@@ -185,56 +162,12 @@
 		padding: 1rem; 
 	} 
 
-	.services { 
-		padding: 0; 
-	} 
-
-	.my-row { 
-		display: flex; 
-		align-items: center; 
-		justify-content: space-between; 
-		flex-direction: column; 
-		margin: 2rem 0; 
-		gap: 1rem; 
-	} 
-
-	.my-row .my-col { 
-		text-align: center; 
-		width: 100%; 
-	} 
-
 	.contact { 
 		padding: 0; 
 	} 
 
-	.contact-content { 
-		flex-direction: column; 
-		align-items: center; 
-		gap: 2rem; 
-	} 
-
-	.contact-form-container { 
-		width: 80%; 
-	} 
-
-	.contact-form .form-controls { 
-		width: 100%; 
-	} 
-
-	.contact-form .form-btn { 
-		width: 100%; 
-	} 
-
 	.contact-details { 
 		width: 80%; 
-	} 
-
-	.footer-menu { 
-		padding: 0 2rem; 
-	} 
-
-	.footer-list-items { 
-		margin: 0; 
 	} 
 
 	.scroll{
