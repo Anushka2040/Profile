@@ -1,0 +1,243 @@
+/* Responsive CSS file styles defined for smaller width devices */
+/* CSS for tablet devices */
+:root {
+	--text-color: hsl(230 16% 28%);
+
+	/* header */
+	--header-bg: hsl(0 0% 100% / 75%);
+
+	/* section */
+	--section: hsl(0 0% 93%);
+	--section-even: hsl(210deg 15% 92%);
+
+	/* tiles */
+	--red: hsl(10 83% 52%);
+	--green: hsl(157 91% 43%);
+	--blue: hsl(210 100% 45%);
+	--purple: hsl(266 100% 67%);
+	--yellow: hsl(49 100% 73%);
+	--black: hsl(0 0% 0%);
+
+	/*  */
+	--cubic: cubic-bezier(0.25, 0.1, 0, 2.05);
+}
+@media screen and (min-width: 576px) and (max-width: 820px) { 
+	.logo { 
+		padding: 0 3rem; 
+	} 
+
+	.hamburger { 
+		display: block; 
+		padding: 0 3rem; 
+	} 
+
+	.menu { 
+		position: absolute; 
+		right: 0; 
+		padding: 0 3rem; 
+		top: 75px; 
+		background-image: linear-gradient(180deg, #74D7BB, #53C8B6, #35A99C); 
+		display: none; 
+		transition: all 0.25s; 
+	} 
+
+	.menu .menu-list { 
+		flex-direction: column; 
+	} 
+
+	.portfolio { 
+		padding: 0; 
+	} 
+
+	.about { 
+		flex-direction: column; 
+	} 
+
+	.about .about-text { 
+		padding: 2rem; 
+	} 
+
+	.about .about-image img { 
+		padding: 2rem; 
+	} 
+
+	.services { 
+		padding: 0; 
+	} 
+
+	.my-row { 
+		gap: 10px; 
+	} 
+
+	.my-row .my-col { 
+		text-align: center; 
+		width: 35%; 
+	} 
+
+	.scroll{
+		display: none;
+	}
+
+	.headings{
+		& h1{
+			font-size: 20px;
+		}
+	}
+
+	.ui-page {
+		& h2{
+			font-size: 50px;
+		}
+	}
+} 
+
+
+/* CSS for mobile devices */
+@media screen and (min-width: 280px) and (max-width: 576px) { 
+		.headings{
+			& h1{
+				font-size: 20px;
+			}
+		}
+
+		.ui-page {
+			& h2{
+				font-size: 50px;
+			}
+		}
+		
+		body {
+			&:has(input[id="burger"]:checked) {
+				scrollbar-gutter: stable;
+				overflow-y: hidden;
+			}
+		}
+	
+		header {
+			--position: absolute;
+			--translateY: -100%;
+			--show: block;
+			--nav-bg: var(--green);
+	
+			& nav {
+				top: 0;
+				translate: 0 var(--translateY);
+	
+				inline-size: 100%;
+				block-size: 100dvh;
+				padding-inline: 1rem;
+				transition: all 200ms ease-in-out;
+	
+				& ul {
+					block-size: 100%;
+					flex-direction: column;
+					justify-content: space-evenly;
+				}
+			}
+	
+			& .menu {
+				&:has(input[type="checkbox"]:checked) {
+					& ~ nav {
+						--translateY: 0;
+					}
+				}
+			}
+		}
+	
+	
+	.hero { 
+		justify-content: center; 
+		color: #fff; 
+		background-image: radial-gradient(circle, rgb(15 14 14 / 30%), rgb(102 96 96 / 40%), rgb(163 160 160 / 16%)), url('./Images/heroImg3.avif') 
+	} 
+
+	.sub-heading { 
+		color: #fff9f9cc; 
+	} 
+
+	.hero .intro-buttons { 
+		gap: 20px; 
+	} 
+
+	.btn { 
+		padding: 10px 30px; 
+	} 
+
+	.logo { 
+		padding: 0 2rem; 
+	} 
+
+	.portfolio { 
+		padding: 0; 
+	} 
+
+	.about { 
+		flex-direction: column; 
+	} 
+
+	.about .about-text { 
+		width: 90%; 
+		padding: 1rem; 
+	} 
+
+	.about .about-image img { 
+		width: 90%; 
+		padding: 1rem; 
+	} 
+
+	.services { 
+		padding: 0; 
+	} 
+
+	.my-row { 
+		display: flex; 
+		align-items: center; 
+		justify-content: space-between; 
+		flex-direction: column; 
+		margin: 2rem 0; 
+		gap: 1rem; 
+	} 
+
+	.my-row .my-col { 
+		text-align: center; 
+		width: 100%; 
+	} 
+
+	.contact { 
+		padding: 0; 
+	} 
+
+	.contact-content { 
+		flex-direction: column; 
+		align-items: center; 
+		gap: 2rem; 
+	} 
+
+	.contact-form-container { 
+		width: 80%; 
+	} 
+
+	.contact-form .form-controls { 
+		width: 100%; 
+	} 
+
+	.contact-form .form-btn { 
+		width: 100%; 
+	} 
+
+	.contact-details { 
+		width: 80%; 
+	} 
+
+	.footer-menu { 
+		padding: 0 2rem; 
+	} 
+
+	.footer-list-items { 
+		margin: 0; 
+	} 
+
+	.scroll{
+		display: none;
+	}
+}
