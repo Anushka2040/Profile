@@ -3,14 +3,11 @@
 :root {
 	--text-color: hsl(230 16% 28%);
 
-	/* header */
 	--header-bg: hsl(0 0% 100% / 75%);
 
-	/* section */
 	--section: hsl(0 0% 93%);
 	--section-even: hsl(210deg 15% 92%);
 
-	/* tiles */
 	--red: hsl(10 83% 52%);
 	--green: hsl(157 91% 43%);
 	--blue: hsl(210 100% 45%);
@@ -18,14 +15,10 @@
 	--yellow: hsl(49 100% 73%);
 	--black: hsl(0 0% 0%);
 
-	/*  */
 	--cubic: cubic-bezier(0.25, 0.1, 0, 2.05);
 }
-@media screen and (min-width: 576px) and (max-width: 820px) { 
-	.logo { 
-		padding: 0 3rem; 
-	} 
 
+@media screen and (min-width: 576px) and (max-width: 820px) { 
 	.hamburger { 
 		display: block; 
 		padding: 0 3rem; 
@@ -65,83 +58,150 @@
 		display: none;
 	}
 
-	.headings{
-		& h1{
-			font-size: 20px;
-		}
-	}
-
 	.ui-page {
 		& h2{
 			font-size: 50px;
 		}
+		& h1{
+			font-size: 24px;
+		}
 	}
-} 
+
+	.preview {
+		.img{
+			display:none;
+		}
+	}
+
+	section {
+		width: 100%;
+		overflow-y: scroll;
+	}
+
+	.headings{
+		& h1 {
+			font-size: 30px;
+		}
+		& h4 {
+			font-size: 14px;
+		}
+	}
+
+	.dashboard {
+		& h2 { 
+			font-size: 35px; 
+		} 
+	}
+}
 
 
 /* CSS for mobile devices */
 @media screen and (min-width: 280px) and (max-width: 576px) { 
-		.headings{
-			& h1{
-				font-size: 20px;
+	.dashboard {
+		& h2 { 
+			font-size: 35px; 
+		} 
+	}
+	  
+	section {
+		width: 100%;
+		overflow-y: scroll;
+	}
+
+	.preview {
+		.img{	
+			display:none;
+		}
+	}
+
+	.headings {
+		& h1{
+			grid-row-end: 1;
+			animation: scale-up linear;
+			animation-timeline: var(--name);
+			animation-range: entry-crossing 70% exit 90%, exit 10% exit 70%;
+			margin-bottom: 1px;
+			font-size: 30px;
+		}
+		& h4 {
+			font-size: 14px;
+		}
+	}
+
+	@keyframes scale-up {
+		100% {
+			top: 0;
+			scale: 5;
+		}
+	}
+
+	@keyframes fade-away {
+		0% {
+			opacity: 1;
+		}
+		100% {
+			opacity: 0;
+		}
+	}
+
+	.heading {
+		& h2{
+			font-size: 50px;
+		} 
+	}
+
+	.ui-page {
+		/* & h2{
+			font-size: 50px;
+		} */
+		& h1{
+			font-size: 24px;
+		}
+	}
+	
+	body {
+		&:has(input[id="burger"]:checked) {
+			scrollbar-gutter: stable;
+			overflow-y: hidden;
+		}
+	}
+
+	header {
+		--position: absolute;
+		--translateY: -100%;
+		--show: block;
+
+		& nav {
+			top: 0;
+			translate: 0 var(--translateY);
+
+			inline-size: 100%;
+			block-size: 100dvh;
+			padding-inline: 1rem;
+			transition: all 200ms ease-in-out;
+
+			& ul {
+				block-size: 100%;
+				flex-direction: column;
+				justify-content: space-evenly;
 			}
 		}
 
-		.ui-page {
-			& h2{
-				font-size: 50px;
-			}
-		}
-		
-		body {
-			&:has(input[id="burger"]:checked) {
-				scrollbar-gutter: stable;
-				overflow-y: hidden;
-			}
-		}
-	
-		header {
-			--position: absolute;
-			--translateY: -100%;
-			--show: block;
-			--nav-bg: var(--green);
-	
-			& nav {
-				top: 0;
-				translate: 0 var(--translateY);
-	
-				inline-size: 100%;
-				block-size: 100dvh;
-				padding-inline: 1rem;
-				transition: all 200ms ease-in-out;
-	
-				& ul {
-					block-size: 100%;
-					flex-direction: column;
-					justify-content: space-evenly;
+		& .menu {
+			&:has(input[type="checkbox"]:checked) {
+				& ~ nav {
+					--translateY: 0;
 				}
 			}
-	
-			& .menu {
-				&:has(input[type="checkbox"]:checked) {
-					& ~ nav {
-						--translateY: 0;
-					}
-				}
-			}
 		}
-
-
-	.intro .intro-buttons { 
-		gap: 20px; 
 	} 
 
+	section {
+		width: 100%;
+	}
+	
 	.btn { 
 		padding: 10px 30px; 
-	} 
-
-	.logo { 
-		padding: 0 2rem; 
 	} 
 
 	.portfolio { 
@@ -172,5 +232,9 @@
 
 	.scroll{
 		display: none;
+	}
+
+	.btn-footer{
+		padding:10px 10px ;
 	}
 }

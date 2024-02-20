@@ -1,18 +1,17 @@
-const hamburger = document.getElementById('hamburger'); 
-const menu = document.querySelector('.menu'); 
-
-hamburger.addEventListener('click', function () { 
-	const hamIcon = this.querySelector('.hamburger-icon'); 
-	const crossIcon = this.querySelector('.cross-icon'); 
-	if (hamIcon.style.display === "none") { 
-		hamIcon.style.display = "inline-block"
-		menu.style.display = "none"
-		crossIcon.style.display = "none"
-	} 
-	else { 
-		crossIcon.style.display = "inline-block"
-		hamIcon.style.display = "none"
-		menu.style.display = "block"
-	} 
+const elements = document.querySelectorAll('.fade-in');
+const options = {
+  root: null,
+  rootMargin: '0px',
+  threshold: .4
+}
+const callbacks = (entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting){
+      entry.target.classList.add('active');
+    }
+  });
+}
+let observer = new IntersectionObserver(callbacks, options);
+elements.forEach(element => {
+  observer.observe(element);
 });
-
