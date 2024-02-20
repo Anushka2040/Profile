@@ -121,7 +121,7 @@
 			animation-timeline: var(--name);
 			animation-range: entry-crossing 70% exit 90%, exit 10% exit 70%;
 			margin-bottom: 1px;
-			font-size: 30px;
+			font-size: 39px;
 		}
 		& h4 {
 			font-size: 14px;
@@ -148,15 +148,6 @@
 		& h2{
 			font-size: 50px;
 		} 
-	}
-
-	.ui-page {
-		/* & h2{
-			font-size: 50px;
-		} */
-		& h1{
-			font-size: 24px;
-		}
 	}
 	
 	body {
