@@ -538,7 +538,7 @@ h1 {
 	padding: 3rem 1rem;
 
 	.content {
-		display: grid;
+		/* display: grid; */
 		grid-template-columns: repeat(var(--columns), 1fr);
 		place-content: center;
 		gap: 2rem;
